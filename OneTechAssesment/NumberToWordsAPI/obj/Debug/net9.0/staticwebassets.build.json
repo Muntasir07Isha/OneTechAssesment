@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "UWQnWeSOV31WpafuQcProQefg5zsbyiVMzqd507+v9A=",
+  "Source": "NumberToWordsAPI",
+  "BasePath": "_content/NumberToWordsAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number to Words Converter</title>
+    <style>
+      body {
+        font-family: monospace, sans-serif;
+        margin: 20px;
+      }
+      label,
+      button {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Number to Words Converter</h1>
+    <label for="numberInput">Enter a number:</label>
+    <input type="text" id="numberInput" placeholder="e.g. 123.45" />
+    <button onclick="convertNumber()">Convert</button>
+    <h2>Result:</h2>
+    <p id="result"></p>
+
+    <script>
+      async function convertNumber() {
+        const number = document.getElementById("numberInput").value;
+        const response = await fetch(
+          `http://localhost:5165/api/NumberToWords/${encodeURIComponent(
+            number
+          )}`
+        );
+        const data = await response.text();
+        document.getElementById("result").innerText = data;
+      }
+    </script>
+  </body>
+</html>
